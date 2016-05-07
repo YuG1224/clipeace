@@ -1,0 +1,24 @@
+{
+  "name": "clipeace",
+  "version": "0.0.1",
+  "description": "Copy the innerText of the Element to the clipboard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuG1224/clipeace.git"
+  },
+  "keywords": [
+    "clipboard",
+    "copy",
+    "cut"
+  ],
+  "author": "Yuji Yamaguchi <yuji.yamaguchi24@gmail.com> (https://blog.yug1224.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YuG1224/clipeace/issues"
+  },
+  "homepage": "https://github.com/YuG1224/clipeace#readme"
+}

@@ -92,6 +92,22 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],2:[function(require,module,exports){
+'use strict';
+
+const clipeace = require('../src/clipeace');
+const target = document.getElementById('target');
+const copyBtn = document.getElementById('copyBtn');
+
+copyBtn.addEventListener('click', function(){
+  clipeace(target)
+    .then(function(res){
+      console.log(res);
+    }).catch(function(error){
+      console.log(error);
+    });
+}, false);
+
+},{"../src/clipeace":4}],3:[function(require,module,exports){
 (function (process,global){
 /* @preserve
  * The MIT License (MIT)
@@ -5549,7 +5565,9 @@ module.exports = ret;
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":1}],3:[function(require,module,exports){
+},{"_process":1}],4:[function(require,module,exports){
+'use strict';
+
 const Promise = require('bluebird');
 
 const clipeace = function(elem) {
@@ -5583,4 +5601,4 @@ const clipeace = function(elem) {
 
 module.exports = clipeace;
 
-},{"bluebird":2}]},{},[3]);
+},{"bluebird":3}]},{},[2]);

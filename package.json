@@ -4,7 +4,10 @@
   "description": "Copy the innerText of the Element to the clipboard",
   "main": "lib/clipeace.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src --out-dir lib --presets es2015 ",
+    "browserify": "browserify example/app.js -o example/index.js -t [ babelify --presets [ es2015 ]]",
+    "prepublish": "npm run babel"
   },
   "repository": {
     "type": "git",

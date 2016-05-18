@@ -9,7 +9,7 @@ A simple clipboard module
 npm install --save clipeace
 ```
 
-## Setup
+## Usage
 
 ```js
 const clipeace = require('clipeace');

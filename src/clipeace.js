@@ -5,17 +5,27 @@ const Promise = require('bluebird');
 const clipeace = function(elem) {
   return new Promise((resolve, reject) => {
 
-    const selection = window.getSelection();
-    const range = document.createRange();
     let text = undefined;
     let copy = false;
 
-    range.selectNodeContents(elem);
-    selection.removeAllRanges();
-    selection.addRange(range);
-    text = selection.toString();
-    copy = document.execCommand('copy');
-    selection.removeAllRanges();
+    if (['INPUT', 'TEXTAREA'].includes(elem.nodeName)) {
+      elem.focus();
+      elem.setSelectionRange(0, elem.value.length);
+      text = elem.value;
+      copy = document.execCommand('copy');
+      elem.blur();
+
+    } else {
+      const selection = window.getSelection();
+      const range = document.createRange();
+
+      range.selectNodeContents(elem);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      text = selection.toString();
+      copy = document.execCommand('copy');
+      selection.removeAllRanges();
+    }
 
     const res = {
       text: text,

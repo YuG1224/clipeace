@@ -11,12 +11,14 @@ npm install --save clipeace
 
 ## Setup
 
-```
+```js
 const clipeace = require('clipeace');
+const target = document.getElementById('target');
 
-clipboard(elm).then((res) => {
-  // suceess
-}).catch((err) => {
-  // failure
-})
+clipeace(target)
+  .then((res) => {
+    // suceess
+  }).catch((err) => {
+    // failure
+  })
 ```

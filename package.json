@@ -1,6 +1,6 @@
 {
   "name": "clipeace",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Copy the innerText of the Element to the clipboard",
   "main": "lib/clipeace.js",
   "scripts": {

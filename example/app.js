@@ -6,9 +6,9 @@ const copyBtn = document.getElementById('copyBtn');
 
 copyBtn.addEventListener('click', function(){
   clipeace(target)
-    .then(function(res){
+    .then((res) => {
       console.log(res);
-    }).catch(function(error){
+    }).catch((error) => {
       console.log(error);
     });
 }, false);

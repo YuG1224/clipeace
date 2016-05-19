@@ -1,6 +1,4 @@
-'use strict';
-
-const clipeace = require('../src/clipeace');
+const clipeace = require('../lib/clipeace');
 const target = document.getElementById('target');
 const copyBtn = document.getElementById('copyBtn');
 
